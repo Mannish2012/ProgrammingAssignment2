@@ -25,7 +25,7 @@ make_cache_Matrix <- function(x) {
 
 cache_solve_Matrix <- function(x, ...) {
 
-## Checking to see if Matrix inverse has already been calculated and getting its value
+## Checking to see if Matrix inverse has already been calculated and getting its value from the Cache
 
             calculated_inv <- x$getinv()
             if(!is.null(calculated_inv)) && is.matrix(calculated_inv {
@@ -43,7 +43,7 @@ cache_solve_Matrix <- function(x, ...) {
             Matrix_to_invert <- x$get()
             calculated_inv <- solve(Matrix_to_invert, ...)
 
-## Final inverted matrix
+## Displaying the Final inverted matrix
 
 	message("Inverse of your matrix")
             x$setinv(calculated_inv)
